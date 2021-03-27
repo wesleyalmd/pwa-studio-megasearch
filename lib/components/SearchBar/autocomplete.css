@@ -24,3 +24,9 @@
 .suggestions:empty {
   display: none;
 }
+
+@media (min-width: 641px) {
+  .root {
+    padding-bottom: 0;
+  }
+}

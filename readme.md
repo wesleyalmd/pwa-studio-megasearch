@@ -1,16 +1,16 @@
 # PWA Studio MegaSearch extension
 
-![Preview](https://github.com/wesleyalmd/pwa-studio-newsletter/raw/master/docs/preview1.png 'Preview Megamenu')
+![Preview](https://github.com/wesleyalmd/pwa-studio-megasearch/raw/master/docs/preview1.png 'Preview Megamenu')
 
 ### Requeriments
 
-- Magento 2.3.*
+- Magento 2.3.\*
 
 ### Extension options
 
-| props        | type | default value |
-| ------------ | :--: | ------------: |
-| showMask     | bool |          true |
+| props    | type | default value |
+| -------- | :--: | ------------: |
+| showMask | bool |          true |
 
 ### Install
 
