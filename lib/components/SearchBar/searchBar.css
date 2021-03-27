@@ -1,0 +1,40 @@
+.root {
+  width: 100%;
+}
+
+.root_open {
+  composes: root;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 2px solid rgb(var(--venia-global-color-gray-100));
+  border-bottom: 2px solid rgb(var(--venia-global-color-gray-100));
+  background-color: rgb(var(--venia-global-color-gray-50));
+}
+
+.container {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 3rem;
+}
+
+.search {
+  max-width: 620px;
+  width: 100%;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+.autocomplete {
+}
+
+@media (min-width: 641px) {
+  .form {
+    padding-bottom: 0;
+  }
+}

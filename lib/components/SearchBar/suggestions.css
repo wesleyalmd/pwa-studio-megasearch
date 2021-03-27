@@ -1,0 +1,40 @@
+.headingCategories,
+.heading {
+  color: rgb(var(--venia-global-color-text-alt));
+  font-size: 0.875rem;
+  padding: 0.75rem 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(var(--venia-global-color-border));
+}
+
+.categories,
+.products {
+  flex-basis: 100%;
+  padding: 0 1rem;
+  margin: 1rem 0 0;
+}
+
+.products ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.products li {
+  flex-basis: 100%;
+  margin-top: 1rem;
+}
+
+@media (min-width: 641px) {
+  .categories {
+    flex-basis: 30%;
+  }
+
+  .products {
+    flex-basis: 70%;
+  }
+
+  .products li {
+    flex-basis: 50%;
+  }
+}

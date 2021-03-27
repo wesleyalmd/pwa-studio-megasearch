@@ -1,0 +1,26 @@
+.root {
+  padding-bottom: 1rem;
+  transition-property: opacity, transform, visibility;
+  min-height: 60px;
+  max-width: var(--venia-global-maxWidth);
+  margin: 0 auto;
+}
+
+.root_hidden {
+  composes: hidden from '~@magento/venia-ui/lib/components/SearchBar/autocomplete.css';
+  composes: root;
+}
+
+.root_visible {
+  composes: visible from '~@magento/venia-ui/lib/components/SearchBar/autocomplete.css';
+  composes: root;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.suggestions:empty {
+  display: none;
+}

@@ -1,0 +1,10 @@
+.root {
+}
+
+.root li {
+  margin: 1rem 0;
+}
+
+.root:empty {
+  display: none;
+}

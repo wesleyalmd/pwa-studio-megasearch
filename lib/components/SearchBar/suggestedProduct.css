@@ -1,0 +1,20 @@
+.root {
+}
+
+.image {
+  float: left;
+  margin-right: 1rem;
+}
+
+.image img {
+  width: 70px;
+}
+
+.thumbnail {
+}
+
+.name {
+  display: block;
+  word-break: break-word;
+  margin-bottom: 0.5rem;
+}
