@@ -1,6 +1,6 @@
 # PWA Studio MegaSearch extension
 
-![Preview](https://github.com/wesleyalmd/pwa-studio-megasearch/raw/master/docs/preview1.png 'Preview Megamenu')
+![Preview](https://github.com/wesleyalmd/pwa-studio-megasearch/raw/master/docs/preview.png 'Preview Megamenu')
 
 ### Requeriments
 
