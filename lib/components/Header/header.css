@@ -1,0 +1,7 @@
+@media (min-width: 641px) {
+  .switchersContainer {
+    composes: switchersContainer from '~@magento/venia-ui/lib/components/Header/header.css';
+    position: relative;
+    z-index: 4;
+  }
+}

@@ -37,6 +37,12 @@ module.exports = (targetables, options) => {
       '@magento/venia-ui/lib/components/Header/header.js'
     );
 
+    /* adding custom css */
+    HeaderComponent.addImport(
+      "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/Header/header.css'"
+    );
+    HeaderComponent.insertAfterSource('defaultClasses,', ' megasearchClasses,');
+
     /* adding controlled mask */
     HeaderComponent.insertAfterSource(
       'props => {',
