@@ -1,6 +1,6 @@
 {
   "name": "@wesleyalmd/pwa-studio-megasearch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Megasearch extension for PWA Studio.",
   "author": "Wesley Almeida <wesleyalmd@gmail.com>",
   "main": "./index.js",
