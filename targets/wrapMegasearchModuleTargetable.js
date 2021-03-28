@@ -22,6 +22,7 @@ module.exports = (targetables, options) => {
       'isMasked } = props;\n',
       'const [megaSearchOverlay, setMegaSearchOverlay] = useState(false);\n'
     );
+    MainComponent.insertBeforeSource('isMasked ?', 'megaSearchOverlay || ');
     MainComponent.insertAfterSource(
       '<Footer />\n',
       '<MegaSearchMask isActive={megaSearchOverlay} />\n'
@@ -39,9 +40,9 @@ module.exports = (targetables, options) => {
 
     /* adding custom css */
     HeaderComponent.addImport(
-      "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/Header/header.css'"
+      "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/Header/header.css'"
     );
-    HeaderComponent.insertAfterSource('defaultClasses,', ' megasearchClasses,');
+    HeaderComponent.insertAfterSource('defaultClasses,', ' megaSearchClasses,');
 
     /* adding controlled mask */
     HeaderComponent.insertAfterSource(
@@ -73,6 +74,16 @@ module.exports = (targetables, options) => {
     \n\n
   `
     );
+
+    /* resolve switchers dropdown on mask */
+    HeaderComponent.addImport(
+      "import { Portal } from '@magento/venia-ui/lib/components/Portal'"
+    );
+    HeaderComponent.insertBeforeSource(
+      '<div className={classes.switchersContainer}>',
+      '<Portal>\n'
+    );
+    HeaderComponent.insertBeforeSource('<header className={rootClass}>', '</Portal>\n');
   }
 
   /**
@@ -84,9 +95,9 @@ module.exports = (targetables, options) => {
 
   /* adding custom css */
   SearchBarComponent.addImport(
-    "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/searchBar.css'"
+    "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/searchBar.css'"
   );
-  SearchBarComponent.insertAfterSource('defaultClasses,', ' megasearchClasses,');
+  SearchBarComponent.insertAfterSource('defaultClasses,', ' megaSearchClasses,');
 
   /**
    * Search Autocomplete
@@ -106,9 +117,9 @@ module.exports = (targetables, options) => {
 
   /* adding custom css */
   AutocompleteComponent.addImport(
-    "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/autocomplete.css'"
+    "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/autocomplete.css'"
   );
-  AutocompleteComponent.insertAfterSource('defaultClasses,', ' megasearchClasses,');
+  AutocompleteComponent.insertAfterSource('defaultClasses,', ' megaSearchClasses,');
 
   /**
    * Suggestions
@@ -119,9 +130,9 @@ module.exports = (targetables, options) => {
 
   /* adding custom css */
   SuggestionsComponent.addImport(
-    "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestions.css'"
+    "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestions.css'"
   );
-  SuggestionsComponent.insertAfterSource('defaultClasses,', ' megasearchClasses,');
+  SuggestionsComponent.insertAfterSource('defaultClasses,', ' megaSearchClasses,');
 
   /* adding and controlled title show by windowSize */
   SuggestionsComponent.addImport("import { useWindowSize } from '@magento/peregrine'");
@@ -168,11 +179,11 @@ module.exports = (targetables, options) => {
 
   /* adding custom css */
   SuggestionsCategoriesComponent.addImport(
-    "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestedCategories.css'"
+    "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestedCategories.css'"
   );
   SuggestionsCategoriesComponent.insertAfterSource(
     'defaultClasses,',
-    ' megasearchClasses,'
+    ' megaSearchClasses,'
   );
 
   /**
@@ -184,11 +195,11 @@ module.exports = (targetables, options) => {
 
   /* adding custom css */
   SuggestionsProductsComponent.addImport(
-    "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestedProducts.css'"
+    "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestedProducts.css'"
   );
   SuggestionsProductsComponent.insertAfterSource(
     'defaultClasses,',
-    ' megasearchClasses,'
+    ' megaSearchClasses,'
   );
 
   /**
@@ -200,9 +211,9 @@ module.exports = (targetables, options) => {
 
   /* adding custom css */
   SuggestedProductComponent.addImport(
-    "import megasearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestedProduct.css'"
+    "import megaSearchClasses from '@wesleyalmd/pwa-studio-megasearch/lib/components/SearchBar/suggestedProduct.css'"
   );
-  SuggestedProductComponent.insertAfterSource('defaultClasses,', ' megasearchClasses,');
+  SuggestedProductComponent.insertAfterSource('defaultClasses,', ' megaSearchClasses,');
 
   /* change image size */
   SuggestedProductComponent.removeJSXProps('Image', 'width');

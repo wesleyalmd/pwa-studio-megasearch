@@ -14,10 +14,13 @@
   margin: 1rem 0 0;
 }
 
+.products {
+  padding-bottom: 4rem;
+}
+
 .products ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem 0;
 }
 
 .products li {
@@ -32,6 +35,7 @@
 
   .products {
     flex-basis: 70%;
+    padding-bottom: 2rem;
   }
 
   .products li {
